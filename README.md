@@ -4,7 +4,7 @@
 
 ![storybook-addon-toggle in action](https://raw.githubusercontent.com/majapw/storybook-addon-toggle/master/storybook-addon-toggle.gif)
 
-You can see the live demo [here](majapw.github.io/storybook-addon-toggle).
+You can see the live demo [here](https://majapw.github.io/storybook-addon-toggle).
 
 A side note: `react-storybook` currently does not allow us to add custom content to the manager window except for in the form of a panel. Because I wanted the toggle button to always be visible, I chose to implement it in the preview window. This does mean it gets unmounted and remounted several times. If the ability to add custom content to the `react-storybook` left panel gets introduced, I would probably update this library to do that instead.
 
