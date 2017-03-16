@@ -21,6 +21,49 @@ const storyTypes = types.map(type => (
   }
 ));
 
+function renderToggleButton(onClick, type) {
+  const showHarryPotterButton = type === 'sw';
+
+  let buttonAltText;
+  let buttonText;
+  let style;
+  if (showHarryPotterButton) {
+    buttonAltText = 'This button is slytherin themed.';
+    buttonText = '⚡ Go to Harry Potter Mode ⚡';
+    style = {
+      background: '#006600',
+      color: '#fff',
+      border: '3px solid #006600',
+    };
+  } else {
+    buttonAltText = 'This button is alliance themed.';
+    buttonText = '★ Go to Star Wars Mode ★';
+    style = {
+      background: '#fff',
+      color: '#B20000',
+      border: '3px solid #B20000',
+    };
+  }
+
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      title={buttonAltText}
+      style={{
+        ...style,
+        padding: 8,
+        fontSize: 16,
+        fontWeight: 'bold',
+        borderRadius: 3,
+        lineHeight: '24px',
+      }}
+    >
+      {buttonText}
+    </button>
+  );
+}
+
 function loadStories() {
   Object.entries(allExamples).forEach(([name, examplesFunc]) => {
     const story = storiesOf(name, module);
@@ -39,6 +82,7 @@ function loadStories() {
             <WithToggle
               storyTypes={storyTypes}
               type={viewMode}
+              renderCustomButton={onClick => renderToggleButton(onClick, viewMode)}
             >
               {exampleComponent}
             </WithToggle>

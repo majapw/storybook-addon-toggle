@@ -11,10 +11,12 @@ const propTypes = {
     })),
   })).isRequired,
   type: PropTypes.string.isRequired,
+  renderCustomButton: PropTypes.func,
 };
 
 const defaultProps = {
   children: null,
+  renderCustomButton: null,
 };
 
 export default class WithToggle extends React.Component {
@@ -47,8 +49,19 @@ export default class WithToggle extends React.Component {
     channel.emit('toggle/toggle-stories', nextType);
   }
 
+  renderDefaultButton() {
+    return (
+      <button
+        type="button"
+        onClick={this.toggleStoryView}
+      >
+        Toggle View Mode
+      </button>
+    );
+  }
+
   render() {
-    const { children } = this.props;
+    const { children, renderCustomButton } = this.props;
     return (
       <div>
         {children}
@@ -61,12 +74,10 @@ export default class WithToggle extends React.Component {
             zIndex: 9999,
           }}
         >
-          <button
-            type="button"
-            onClick={this.toggleStoryView}
-          >
-            Toggle View Mode
-          </button>
+          {renderCustomButton
+            ? renderCustomButton(this.toggleStoryView)
+            : this.renderDefaultButton()
+          }
         </div>
       </div>
     );
