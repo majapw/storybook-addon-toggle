@@ -34,3 +34,4 @@ node_modules
 
 .storybook
 examples
+storybook-addon-toggle.gif
