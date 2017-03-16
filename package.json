@@ -2,7 +2,7 @@
   "name": "storybook-addon-toggle",
   "version": "1.0.2",
   "description": "Story type toggle addon for storybook",
-  "main": "./build/index.js",
+  "main": "./lib/index.js",
   "scripts": {
     "build": "npm run clean && babel src/ -d lib/",
     "clean": "rimraf lib",
