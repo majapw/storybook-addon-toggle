@@ -86,7 +86,7 @@ This is an array of objects representing your individual groupings of stories. A
     stories: [{
       kind: 'Harry',
       stories: [
-        'Harry Potter and the Philospher's Stone', 
+        'Harry Potter and the Philospher\'s Stone', 
         'Harry Potter and the Chamber of Secrets', 
         'Harry Potter and the Prisoner of Azkaban'
       ],
@@ -94,7 +94,7 @@ This is an array of objects representing your individual groupings of stories. A
     {
       kind: 'Hermione',
       stories: [
-        'Harry Potter and the Philospher's Stone', 
+        'Harry Potter and the Philospher\'s Stone', 
         'Harry Potter and the Chamber of Secrets', 
         'Harry Potter and the Prisoner of Azkaban'
       ],
@@ -102,7 +102,7 @@ This is an array of objects representing your individual groupings of stories. A
     {
       kind: 'Ron',
       stories: [
-        'Harry Potter and the Philospher's Stone', 
+        'Harry Potter and the Philospher\'s Stone', 
         'Harry Potter and the Chamber of Secrets', 
         'Harry Potter and the Prisoner of Azkaban'
       ],
