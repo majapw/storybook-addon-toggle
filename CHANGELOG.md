@@ -1,3 +1,5 @@
+## v1.1.0
+- [new] Add renderCustomButton prop to the `WithToggle` component
 
 ## v1.0.3
 - [fix] Export correct file in main
